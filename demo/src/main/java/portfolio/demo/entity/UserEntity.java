@@ -13,5 +13,5 @@ public class UserEntity {
     private Long id;
 
     @Nonnull
-    private String Name;
+    private String name;
 }

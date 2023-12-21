@@ -1,17 +1,18 @@
 package portfolio.demo.controller;
 
-import org.hibernate.mapping.List;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import portfolio.demo.service.*;
 import portfolio.demo.entity.*;
 
-@RestController
+@Controller
 @CrossOrigin
-@RequestMapping("/api")
+//@RequestMapping("/api")
 public class MainScreenController {
     
     private UserService userService;
@@ -23,6 +24,7 @@ public class MainScreenController {
         this.projectService = projectService;
     }
 
+    @GetMapping("/mainscreen")
     public String listUsersAndProjects(Model theModel, @Param("userkey") String userkey, @Param("projectkey") String projectkey){
 
         java.util.List<UserEntity> userList = userService.listAll(userkey);

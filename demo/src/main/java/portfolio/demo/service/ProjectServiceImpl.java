@@ -14,7 +14,7 @@ public class ProjectServiceImpl implements ProjectService{
     private ProjectRepository projectRepository;
 
     @Autowired
-    public ProjectServiceImpl(ProjectRepository ProjectRepository) {
+    public ProjectServiceImpl(ProjectRepository projectRepository) {
         this.projectRepository = projectRepository;
     }
     
