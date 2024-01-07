@@ -1,7 +1,8 @@
 package portfolio.demo.service;
 
-import java.util.List;
 import portfolio.demo.entity.UserEntity;
+
+import java.util.List;
 
 public interface UserService {
 

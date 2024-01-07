@@ -1,10 +1,10 @@
 package portfolio.demo.entity;
 
-import java.time.LocalDate;
-
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+
+import java.time.LocalDate;
 
 @Entity
 public class ProjectEntity {
