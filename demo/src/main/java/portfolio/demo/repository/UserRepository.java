@@ -1,10 +1,10 @@
 package portfolio.demo.repository;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import portfolio.demo.entity.UserEntity;
+
+import java.util.List;
 
 public interface UserRepository extends CrudRepository<UserEntity, Long>{
     

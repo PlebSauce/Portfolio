@@ -1,0 +1,28 @@
+header {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+}
+
+nav a:hover {
+    background-color: #555;
+} */

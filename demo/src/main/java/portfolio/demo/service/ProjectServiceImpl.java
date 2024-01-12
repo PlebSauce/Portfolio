@@ -1,16 +1,15 @@
 package portfolio.demo.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import portfolio.demo.entity.ProjectEntity;
+import portfolio.demo.repository.ProjectRepository;
+
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import portfolio.demo.repository.ProjectRepository;
-import portfolio.demo.entity.ProjectEntity;
-
 @Service
-public class ProjectServiceImpl implements ProjectService{
+public class ProjectServiceImpl implements ProjectService {
     private ProjectRepository projectRepository;
 
     @Autowired
