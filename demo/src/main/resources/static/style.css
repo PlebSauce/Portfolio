@@ -8,12 +8,52 @@ h1 {
     color: white;
 }
 
+.content h2:nth-of-type(1) {
+    text-align: center;
+    padding: 200px 800px 0 50px;
+    font-size: 50px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    margin: 0;
+}
 .content h2 {
     text-align: center;
-    padding: 200px 0;
-    font-size: 60px;
+    padding: 0px 0px 0 50px;
+    font-size: 50px;
     color: white;
+    white-space: nowrap;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    margin: 0;
 }
+.shuffle {
+    position: relative;
+    font-size: 24px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.word1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; 
+    animation: shuffleh2 10s infinite;
+}
+.word2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; 
+    animation: shuffleh2 10s infinite;
+    animation-delay: -2.5s;
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -67,4 +107,23 @@ footer {
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+@keyframes shuffleh2 {
+    0%, 25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    30%, 50% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    55%, 75% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80%, 100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
 }
