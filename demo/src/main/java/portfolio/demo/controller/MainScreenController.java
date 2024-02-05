@@ -14,7 +14,7 @@ import portfolio.demo.service.UserService;
 
 @Controller
 @CrossOrigin
-//@RequestMapping("/api")
+@RequestMapping("/")
 public class MainScreenController {
     
     private UserService userService;
