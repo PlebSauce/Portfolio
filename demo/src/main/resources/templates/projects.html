@@ -18,8 +18,13 @@
     </div>
 </nav>
 <h1>MY PROEJCTS</h1>
-<div class="content">
-    
+<div class="projects-content">
+    <ul>
+        <li th:each="project : ${projects}">
+            <p th:text="${project.name}"></p>
+            <p th:text="${project.details}"></p>
+        </li>
+    </ul>
 </div>
 
 <footer>

@@ -11,5 +11,7 @@ public interface ProjectService {
     public List<ProjectEntity> listAll(String key);
 
     public List<ProjectEntity> findAll();
+
+    public List<ProjectEntity> getAllProjects();
     
 }

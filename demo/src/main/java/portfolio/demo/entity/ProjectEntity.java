@@ -1,25 +1,33 @@
 package portfolio.demo.entity;
 
 import jakarta.annotation.Nonnull;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "project_entity")
 public class ProjectEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Long id;
 
     @Nonnull
+    @Column(name="name")
     private String name;
 
+    @Column(name="details")
     private String details;
 
+    @Column(name="start_date")
     private String startDate;
 
+    @Column(name="end_date")
     private String endDate;
 
     public Long getId() {
