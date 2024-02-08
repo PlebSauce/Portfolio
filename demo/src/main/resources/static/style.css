@@ -58,6 +58,18 @@ img {
 }
 .projects-content{
     color:white;
+    margin: 10px;
+}
+.list-projects{
+    flex-wrap: wrap;
+    border: 1px solid #888;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.list-projects p{
+    display: block;
+    text-align: center;
 }
 nav {
     display: flex;

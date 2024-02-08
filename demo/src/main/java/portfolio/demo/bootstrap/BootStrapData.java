@@ -19,13 +19,18 @@ public class BootStrapData implements CommandLineRunner {
     
         if (projectRepository.count() == 0){
             ProjectEntity project1 = new ProjectEntity();
-            project1.setId((long)1);
+            //project1.setId((long)1);
             project1.setName("Next Chess Move Machine Learning");
             project1.setDetails("This is just some example description to fill in later!");
             project1.setStartDate("1/15/2024");
             projectRepository.save(project1);
-            System.out.println("Saved Project");
+
+            ProjectEntity project2 = new ProjectEntity();
+            //project2.setId((long)2);
+            project2.setName("A different example");
+            project2.setDetails("This is just some example description to fill in later! But this one is going to have some more than the other...");
+            project2.setStartDate("5/25/2023");
+            projectRepository.save(project2);
         }
-        System.out.println("Bootstrap hit");
     }
 }

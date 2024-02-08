@@ -3,6 +3,11 @@
 <head>
     <meta charset = "utf-8">
     <meta name="viewport" content="width=device-width, initial=scale = 1">
+    <!--<script>
+        $(window).on('beforeunload', function() {
+            $(window).scrollTop(0);
+        });
+    </script>-->
     <link href="../style.css" rel = "stylesheet" type="text/css">
     <title>My Projects</title>
 </head>
@@ -19,14 +24,12 @@
 </nav>
 <h1>MY PROEJCTS</h1>
 <div class="projects-content">
-    <ul>
-        <li th:each="project : ${projects}">
-            <p th:text="${project.name}"></p>
-            <p th:text="${project.details}"></p>
-        </li>
-    </ul>
+    <div th:each="project : ${projects}" class="list-projects">
+        <h2 th:text="${project.name}"></h2>
+        <p th:text="${project.startDate + ' - ' + project.endDate}"></p>
+        <p th:text="${project.details}"></p>
+    </div>
 </div>
-
 <footer>
     <div class="container">
         <div class="footer-content">

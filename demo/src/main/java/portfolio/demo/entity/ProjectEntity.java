@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 
 @Entity
@@ -24,11 +25,17 @@ public class ProjectEntity {
     @Column(name="details")
     private String details;
 
+    @Nonnull
     @Column(name="start_date")
     private String startDate;
 
     @Column(name="end_date")
     private String endDate;
+    @PrePersist
+    public void control() {
+    if (endDate == null)
+        setEndDate("Present");
+    }
 
     public Long getId() {
         return id;
