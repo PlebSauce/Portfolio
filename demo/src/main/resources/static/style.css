@@ -30,7 +30,7 @@ body {
     min-height: 100vh;
     color: white;
     padding-left: 60px;
-    width: 50%;
+    /*width: 50%;*/
 }
 .text-content {
     max-width: 70%;
