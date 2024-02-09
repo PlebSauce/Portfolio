@@ -74,6 +74,58 @@ img {
 .list-projects h2, .list-projects svg{
     display: inline;
 }
+.contact-container{
+    display:flex;
+}
+.email-section{
+    color:white;
+    border: 1px solid #888;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    height: 200px;
+    position: relative;
+}
+.phone-section{
+    color:white;
+    border: 1px solid #888;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    height: 200px;
+    position: relative;
+}
+
+.email-section svg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+.email-section p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+.phone-section svg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+.phone-section p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
 nav {
     display: flex;
     justify-content: space-between;
