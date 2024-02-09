@@ -31,11 +31,16 @@ public class ProjectEntity {
 
     @Column(name="end_date")
     private String endDate;
+    
     @PrePersist
     public void control() {
     if (endDate == null)
         setEndDate("Present");
     }
+
+    @Column(name="url")
+    private String url;
+
 
     public Long getId() {
         return id;
@@ -71,5 +76,11 @@ public class ProjectEntity {
     public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
-    
+
+    public String getUrl() {
+        return url;
+    }
+    public void setUrl(String url){
+        this.url = url;
+    }
 }

@@ -23,6 +23,7 @@ public class BootStrapData implements CommandLineRunner {
             project1.setName("Next Chess Move Machine Learning");
             project1.setDetails("This is just some example description to fill in later!");
             project1.setStartDate("1/15/2024");
+            project1.setUrl("https://github.com/PlebSauce/ChessMachineLearning");
             projectRepository.save(project1);
 
             ProjectEntity project2 = new ProjectEntity();

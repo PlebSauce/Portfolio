@@ -71,6 +71,9 @@ img {
     display: block;
     text-align: center;
 }
+.list-projects h2, .list-projects svg{
+    display: inline;
+}
 nav {
     display: flex;
     justify-content: space-between;
