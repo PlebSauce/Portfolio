@@ -14,18 +14,18 @@ import portfolio.demo.service.UserService;
 @Controller
 @CrossOrigin
 @RequestMapping("/")
-public class MainScreenController {
+public class indexController {
     
     private UserService userService;
 
     private ProjectService projectService;
 
-    public MainScreenController(UserService userService, ProjectService projectService){
+    public indexController(UserService userService, ProjectService projectService){
         this.userService = userService;
         this.projectService = projectService;
     }
 
-    @GetMapping("/mainscreen")
+    @GetMapping("/index")
     public String listUsersAndProjects(Model theModel, @Param("userkey") String userkey, @Param("projectkey") String projectkey){
 
         java.util.List<UserEntity> userList = userService.listAll(userkey);
@@ -35,6 +35,6 @@ public class MainScreenController {
         java.util.List<ProjectEntity> projectList = projectService.listAll(userkey);
         theModel.addAttribute("projects", projectList);
         theModel.addAttribute("projectkey", projectkey);
-        return "mainscreen";
+        return "index";
     }
 }
