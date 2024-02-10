@@ -14,13 +14,13 @@ import portfolio.demo.service.UserService;
 @Controller
 @CrossOrigin
 @RequestMapping("/")
-public class indexController {
+public class MainScreenController {
     
     private UserService userService;
 
     private ProjectService projectService;
 
-    public indexController(UserService userService, ProjectService projectService){
+    public MainScreenController(UserService userService, ProjectService projectService){
         this.userService = userService;
         this.projectService = projectService;
     }
