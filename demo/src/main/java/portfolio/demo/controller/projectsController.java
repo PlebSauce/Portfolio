@@ -19,6 +19,7 @@ public class ProjectsController {
     public ProjectsController(ProjectService projectService) {
         this.projectService = projectService;
     }
+
     @GetMapping("/projects")
     public String listProjects(Model model){
 

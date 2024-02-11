@@ -30,7 +30,6 @@ body {
     min-height: 100vh;
     color: white;
     padding-left: 60px;
-    /*width: 50%;*/
 }
 .text-content {
     max-width: 70%;
@@ -49,6 +48,12 @@ body {
     color: #f51524;
     padding-top: 30px;
     font-size: 30px;
+    display: block;
+    animation: spin-words 14s infinite;
+}
+#title {
+    overflow: hidden;
+    height: 65px;
 }
 img {
     width: 200px;
@@ -59,6 +64,7 @@ img {
 .projects-content{
     color:white;
     margin: 10px;
+    flex: 1;
 }
 .list-projects{
     flex-wrap: wrap;
@@ -76,6 +82,7 @@ img {
 }
 .contact-container{
     display:flex;
+    flex: 1;
 }
 .email-section{
     color:white;
@@ -180,74 +187,47 @@ footer {
         font-size: 12px;
         color: #888;
     }
-    .footer-about, .footer-copyright {
-        flex: 1;
-    }
     .footer-right a {
         text-decoration: none;
         color: inherit;
         padding-left: 16px;
     }
 
-/*@keyframes shuffleh2 {
-    0%, 25% {
-        opacity: 1;
-        transform: translateY(0);
+@keyframes spin-words {
+    5% {
+        transform: translateY(0%);
+    }   
+    17.5% {
+        transform: translateY(-112%);
     }
-    30%, 50% {
-        opacity: 0;
+    22.5%{
         transform: translateY(-100%);
     }
-    55%, 75% {
-        opacity: 1;
-        transform: translateY(0);
+    35% {
+        transform: translateY(-212%);
     }
-    80%, 100% {
-        opacity: 0;
-        transform: translateY(100%);
+    40% {
+        transform: translateY(-200%);
+    }   
+    52.5%{
+        transform: translateY(-312%);
     }
+    57.5% {
+        transform: translateY(-300%);
+    }   
+    70% {
+        transform: translateY(-412%);
+    }
+    75%{
+        transform: translateY(-400%);
+    }
+    87.5% {
+        transform: translateY(-512%);
+    }
+    92.5% {
+        transform: translateY(-500%);
+    }   
+    100%{
+        transform: translateY(0%);
+    }   
 }
-.content h2:nth-of-type(1) {
-    text-align: center;
-    padding: 200px 800px 0 50px;
-    font-size: 50px;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    display: inline-block;
-    margin: 0;
-}
-.content h2 {
-    text-align: center;
-    padding: 0px 0px 0 50px;
-    font-size: 50px;
-    color: white;
-    white-space: nowrap;
-    font-family: 'Courier New', Courier, monospace;
-    display: inline-block;
-    margin: 0;
-}
-.shuffle {
-    position: relative;
-    font-size: 24px;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.word1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0; 
-    animation: shuffleh2 10s infinite;
-}
-.word2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0; 
-    animation: shuffleh2 10s infinite;
-    animation-delay: -2.5s;
-}*/
