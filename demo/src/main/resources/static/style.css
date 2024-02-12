@@ -69,9 +69,28 @@ img {
 .list-projects{
     flex-wrap: wrap;
     border: 1px solid #888;
-    margin: 10px;
+    margin: 50px;
     padding: 10px;
     text-align: center;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+@media(prefers-reduced-motion) {
+    .list-projects{
+        flex-wrap: wrap;
+        border: 1px solid #888;
+        margin: 50px;
+        padding: 10px;
+        text-align: center;
+        transition: none;
+    }
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
 .list-projects p{
     display: block;
