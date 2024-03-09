@@ -5,12 +5,11 @@ html {
     font-family: 'Courier New', Courier, monospace;
     overflow-x: hidden;
 }
-h1 {
+.header-content {
     background: #1a1b1c;
     padding: 60px;
     text-align: center;
     color: white;
-    font-size: 40px
 }
 body {
     margin: 0;
@@ -64,9 +63,22 @@ img {
 .about-me-content{
     color: white;
     text-align: center;
+    /*opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;*/
+}
+@media(prefers-reduced-motion) {
+    .about-me-content{
+        color: white;
+        text-align: center;
+    }
 }
 .highlighted-word {
     color: #f51524;
+}
+.about-me-content p{
+    margin: 20px;
 }
 .projects-content{
     color:white;
@@ -204,7 +216,8 @@ footer {
 
     .footer-about p {
         font-size: 14px;
-        color: #888
+        color: #888;
+        max-width: 50%;
     }
 
     .footer-copyright {

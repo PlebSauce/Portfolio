@@ -24,7 +24,9 @@
         <a href="/contactandlinks">Links and Contact</a>
     </div>
 </nav>
-<h1>MY PROEJCTS</h1>
+<div class="header-content">
+    <h1>My Projects</h1>
+</div>
 <div class="projects-content">
     <div th:each="project : ${projects}" class="list-projects">
         <h2 th:text="${project.name}"></h2>
