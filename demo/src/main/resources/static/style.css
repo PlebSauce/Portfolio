@@ -74,12 +74,70 @@ img {
         text-align: center;
     }
 }
+
+.skills {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.outer {
+    width: 160px;
+    height: 160px;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border-radius: 50%; 
+}
+
+.inner{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #f51524;
+    border-radius: 50%; 
+}
+
+.about-me-content h1 {
+    margin: 40px
+}
+.about-me-content p {
+    font-size: 16px;
+    margin: 20px;
+}
+
+.past-section, .present-section, .future-section {
+    display: flex;
+    flex: 1;
+}
+
+.left-about-me {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-about-me {
+    width: 50%;
+    background-color: #1a1b1c;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    line-height: 1.5;
+}
+
 .highlighted-word {
     color: #f51524;
 }
-.about-me-content p{
-    margin: 20px;
-}
+
 .projects-content{
     color:white;
     margin: 10px;
@@ -217,7 +275,6 @@ footer {
     .footer-about p {
         font-size: 14px;
         color: #888;
-        max-width: 50%;
     }
 
     .footer-copyright {
