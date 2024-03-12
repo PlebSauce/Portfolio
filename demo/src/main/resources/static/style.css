@@ -75,8 +75,12 @@ img {
     }
 }
 
+*{
+    padding: 0;
+    display: 0;
+    box-sizing: border-box;
+}
 .skills {
-    background-color: white;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -100,8 +104,42 @@ img {
 .inner{
     width: 120px;
     height: 120px;
-    border: 1px solid #f51524;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2), 
+        inset -4px -4px 6px -1px rgba(255,255,255,0.7), 
+        -0.5px -0.5px 0px rgba(255,255,255,1),
+        0.5px 0.5px 0px rgba(0,0,0,0.15),
+        0px 12px 10px -10px rgba(0,0,0,0.05);
     border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#number {
+    font-weight: 600;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.skills circle {
+    fill: none;
+    stroke: url("#GradientColor");
+    stroke-width: 20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: fillSkillCircle 1.5s linear forwards;
+}
+
+@keyframes fillSkillCircle {
+    100%{
+        stroke-dashoffset: 157.5;
+    }
+}
+
+.skills svg {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .about-me-content h1 {
