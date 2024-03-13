@@ -62,7 +62,6 @@ img {
 }
 .about-me-content{
     color: white;
-    text-align: center;
     /*opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
@@ -75,143 +74,130 @@ img {
     }
 }
 
-*{
+* {
+    margin: 0;
     padding: 0;
-    display: 0;
     box-sizing: border-box;
-}
-.skills {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.hard-skills {
+.about-body {
+    color: #fff;
+    background: none;
+}
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+
+.sub-title span {
+    color:#f51524
+}
+
+section {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    width: 40%;
 }
 
-.soft-skills {
-    display: flex;
-    height:50vh;
-    width: 60%;
-    justify-content: center;
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
 }
 
-.soft-skills ul{
-    list-style: none;
-}
-
-.progress-bars{
-    list-style-type: none;
-    padding: 1.5em;
-    color: #fff;
-    background: #111;
-    border-radius: 15px;
-    width: 700px;
-    box-shadow: 0 0 15px #050505;
-    margin: 2em auto;
-}
-
-.progress-bars h3{
-    color: #a6a6a6;
-    font-weight: 400;
-    margin: 0.5em 0;
-}
-.progress-bars li {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.heading {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
 }
 
 .bar {
-    width: 85%;
-    height: 0.5em;
-    background: #111;
-    box-shadow: 
-        inset -1px -1px #5c5c5c,
-        inset 1px 4px 8px #050505;
+    font-size: 23px;
+}
+
+.technical-bars .bar {
+    margin: 40px 0;
+} 
+
+.technical-bars .bar.first-child{
+    margin-top: 0;
+}
+
+.technical-bars .bar.last-child {
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    /*opacity: 0;*/
+}
+
+.technical-bars .bar .progress-line {
+    position: relative;
     border-radius: 10px;
-    margin: 2em 0;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin:left;
 }
 
-.progress {
-    background: linear-gradient(
-        90deg,
-        #305e9c,
-        #70adff
-    );
-    width: 50%;
-    height: 100%;
-    border-radius: inherit;
-    position: relative;
-    box-shadow: 0 0 3px #70adff;
-}
-
-.skill {
-    width: 160px;
-    height: 160px;
-    margin: 20px;
-    position: relative;
-}
-
-.outer {
-    width: 160px;
-    height: 160px;
-    padding: 20px;
-    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
-    border-radius: 50%; 
-}
-
-.inner{
-    width: 120px;
-    height: 120px;
-    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2), 
-        inset -4px -4px 6px -1px rgba(255,255,255,0.7), 
-        -0.5px -0.5px 0px rgba(255,255,255,1),
-        0.5px 0.5px 0px rgba(0,0,0,0.15),
-        0px 12px 10px -10px rgba(0,0,0,0.05);
-    border-radius: 50%; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.number {
-    font-weight: 600;
-    color: #FFFFFF;
-    font-size: 30px;
-}
-
-.skills circle {
-    fill: none;
-    stroke: url("#GradientColor");
-    stroke-width: 20px;
-    stroke-dasharray: 450;
-    stroke-dashoffset: 450;
-    animation: fillSkillCircle 1.5s linear forwards;
-}
-
-@keyframes fillSkillCircle {
-    100%{
-        stroke-dashoffset: var(--dash-offset);
+@keyframes animate {
+    100% {
+        transform: scaleX(1)
     }
 }
 
-.skills svg {
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #f51524;
     position: absolute;
-    top: 0;
-    left: 0;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
 }
 
-.about-me-content h1 {
-    margin: 40px
+.progress-line.html span {
+    width: 80%;
 }
+
+.progress-line.css span {
+    width: 55%;
+}
+
+.progress-line.javascript span {
+    width: 50%;
+}
+
+.progress-line.python span {
+    width: 90%;
+}
+
+.progress-line.react span {
+    width: 10%;
+}
+
+.story-header{
+    text-align: center;
+}
+
+.about-transition {
+    text-align: center;
+}
+
 .about-me-content p {
     font-size: 16px;
     margin: 20px;
