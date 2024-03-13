@@ -81,15 +81,82 @@ img {
     box-sizing: border-box;
 }
 .skills {
-    height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.hard-skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+}
+
+.soft-skills {
+    display: flex;
+    height:50vh;
+    width: 60%;
     justify-content: center;
+}
+
+.soft-skills ul{
+    list-style: none;
+}
+
+.progress-bars{
+    list-style-type: none;
+    padding: 1.5em;
+    color: #fff;
+    background: #111;
+    border-radius: 15px;
+    width: 700px;
+    box-shadow: 0 0 15px #050505;
+    margin: 2em auto;
+}
+
+.progress-bars h3{
+    color: #a6a6a6;
+    font-weight: 400;
+    margin: 0.5em 0;
+}
+.progress-bars li {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar {
+    width: 85%;
+    height: 0.5em;
+    background: #111;
+    box-shadow: 
+        inset -1px -1px #5c5c5c,
+        inset 1px 4px 8px #050505;
+    border-radius: 10px;
+    margin: 2em 0;
+}
+
+.progress {
+    background: linear-gradient(
+        90deg,
+        #305e9c,
+        #70adff
+    );
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    position: relative;
+    box-shadow: 0 0 3px #70adff;
 }
 
 .skill {
     width: 160px;
     height: 160px;
+    margin: 20px;
     position: relative;
 }
 
@@ -115,7 +182,7 @@ img {
     justify-content: center;
 }
 
-#number {
+.number {
     font-weight: 600;
     color: #FFFFFF;
     font-size: 30px;
@@ -132,7 +199,7 @@ img {
 
 @keyframes fillSkillCircle {
     100%{
-        stroke-dashoffset: 157.5;
+        stroke-dashoffset: var(--dash-offset);
     }
 }
 
