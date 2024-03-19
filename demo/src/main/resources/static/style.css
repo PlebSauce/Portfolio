@@ -7,7 +7,7 @@ html {
 }
 .header-content {
     background: #1a1b1c;
-    padding: 60px;
+    padding: 40px;
     text-align: center;
     color: white;
 }
@@ -80,21 +80,21 @@ img {
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+/*
+@media (max-width: 768px) {
+    .technical-skills,
+    .professional-skills {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+this could work for the smaller screens, try it later
+*/
 
 .about-body {
     color: #fff;
     background: none;
-    height: 100vh;
-}
-.sub-title {
-    text-align: center;
-    font-size: 60px;
-    padding-bottom: 70px;
-    padding-top: 30px;
-}
-
-.sub-title span {
-    color:#f51524
+    /*height: 100vh;*/
 }
 
 section {
@@ -103,8 +103,8 @@ section {
 }
 
 .container1{
-    width: 600px;
-    height: 500px;
+    width: calc(50% - 120px);
+    /*height: 500px;*/
     padding: 75px 90px;
     margin-left: 120px;
 }
@@ -386,6 +386,12 @@ section {
     color: #f51524;
 }
 
+.bi.bi-github:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
 .projects-content{
     color:white;
     margin: 10px;
@@ -484,7 +490,7 @@ nav {
     background: #000000;
     padding: 10px;
     font-size: 20px;
-    position: fixed;
+    position: relative;
     right: 0;
     left: 0;
     width: 100%;
@@ -505,6 +511,22 @@ nav {
     nav a:hover {
         background-color: #555;
     } 
+    @media screen and (max-width: 768px) {
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000000;
+            padding: 10px;
+            font-size: 20px;
+            position: relative;
+            right: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            flex-direction: column;
+        }
+    }
 
 footer {
     bottom: 0;
