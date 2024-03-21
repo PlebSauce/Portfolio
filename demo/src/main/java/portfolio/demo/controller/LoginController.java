@@ -42,6 +42,6 @@ public class LoginController {
 
     @GetMapping("/logout")
     public String showLogoutPage(Model model) {
-        return "logout";
+        return "redirect:/login";
     }
 }
